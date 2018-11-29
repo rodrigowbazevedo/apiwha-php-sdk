@@ -32,7 +32,7 @@ class Client
             $query['custom_data'] = $message->getCusomData();
         }
 
-        $response = $this->guzzle->request('GET', self::API_URL . 'send_message.php', [
+        $response = $this->guzzle->get(self::API_URL . 'send_message.php', [
             'query' => $query
         ]);
 
@@ -71,7 +71,7 @@ class Client
             $query['getnotpulledonly'] = 1;
         }
 
-        $response = $this->guzzle->request('GET', self::API_URL . 'get_messages.php', [
+        $response = $this->guzzle->get(self::API_URL . 'get_messages.php', [
             'query' => $query
         ]);
 
@@ -119,7 +119,7 @@ class Client
 
     public function getCredit()
     {
-        $response = $this->guzzle->request('GET', self::API_URL . 'get_credit.php', [
+        $response = $this->guzzle->get(self::API_URL . 'get_credit.php', [
             'query' => [
                 'apikey' => $this->apiKey,
             ]
