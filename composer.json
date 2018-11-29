@@ -1,0 +1,21 @@
+{
+    "name": "rodrigowba/apiwha-php-sdk",
+    "description": "WhatsApp APIWHA SDK",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodrigo Azevedo",
+            "email": "rodrigowbazevedo@yahoo.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "APIWHA\\SDK\\" : "src/"
+        }
+    }
+}
