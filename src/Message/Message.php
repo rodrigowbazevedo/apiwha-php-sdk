@@ -20,6 +20,11 @@ class Message implements MessageInterface
         return $this->number;
     }
 
+    public function getText() : string
+    {
+        return $this->text;
+    }
+
     public function getCustomData() : string
     {
         return $this->customData;
