@@ -29,7 +29,7 @@ class Client
         ];
 
         if($message->hasCustomData()){
-            $query['custom_data'] = $message->getCusomData();
+            $query['custom_data'] = $message->getCustomData();
         }
 
         $response = $this->guzzle->get(self::API_URL . 'send_message.php', [
